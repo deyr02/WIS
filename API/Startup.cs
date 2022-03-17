@@ -32,6 +32,10 @@ namespace API
         {
 
             services.AddControllers();
+             services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+            });
 
 
             services.AddDbContext<DataContext>(opt =>{
@@ -44,7 +48,13 @@ namespace API
             .AddEntityFrameworkStores<DataContext>()
             .AddSignInManager<SignInManager<AppUser>>();
 
-            
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
 
         }
 
@@ -54,12 +64,15 @@ namespace API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                 app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
                
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
+              app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();

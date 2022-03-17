@@ -7,7 +7,6 @@ namespace API.Model
     {
         public string FirstName{get; set;}
         public string LastName { get; set; }
-        public string Eamil {get; set;}
         public DateTime  DOB {get; set;}
     
     }

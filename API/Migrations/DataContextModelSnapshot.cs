@@ -32,9 +32,6 @@ namespace API.Migrations
                     b.Property<DateTime>("DOB")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Eamil")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");

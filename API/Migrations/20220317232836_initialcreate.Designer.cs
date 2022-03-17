@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220317214624_initialcreate")]
+    [Migration("20220317232836_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,6 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DOB")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Eamil")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
