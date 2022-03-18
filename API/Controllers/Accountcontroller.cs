@@ -44,10 +44,10 @@ namespace API.Controllers
             {
                // await SetRefreshToken(user);
                // return createUserObject(user);
-               return Ok("Login successfull");
+               return Ok(CreateUserObject(user));
             }
 
-            return Unauthorized("Invaild Password");
+            return Unauthorized("Invaild Username or password.");
 
         }
 
@@ -77,6 +77,16 @@ namespace API.Controllers
 
             return Ok("Registration success");
 
+        }
+
+
+        private AppUserDTO CreateUserObject(AppUser user){
+            return new AppUserDTO{
+                LastName = user.LastName,
+                FirstName =user.FirstName,
+                Eamil = user.Email,
+                DOB = user.DOB
+            };
         }
         
     }
