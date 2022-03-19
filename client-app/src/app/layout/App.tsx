@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './style.css';
 import axios from 'axios';
-import { Header, Icon, List } from 'semantic-ui-react';
-export interface AppUserDTO {
-  firstName: string;
-  lastName: string;
-  eamil: string;
-  dOB: string;
-}
+import { Container, Header, List } from 'semantic-ui-react';
+import { AppUser } from '../models/AppUser';
+import NavBar from './NavBar';
+import Home from '../../feature/Home/Home';
+
+
+
 
 function App() {
-  const[users, setUsers] = useState<AppUserDTO[]>( []);
+  const[users, setUsers] = useState<AppUser[]>( []);
 
   useEffect(()=>{
-    axios.get('https://localhost:5001/api/account').then(response => {
+    axios.get<AppUser[]>('https://localhost:5001/api/account').then(response => {
   
     setUsers(response.data);
     })
@@ -21,18 +21,24 @@ function App() {
 
 
   return (
-    <div>
-      <Header as='h2' icon={'plug'} content="Wester institute of technology" />
-      <List>
-          {
-         
-            users.map((item)=>(
-              <List.Item key={item.eamil}>{item.firstName}</List.Item>
-            ))
-          }
-      </List>
-   
-    </div>
+    <>
+      <NavBar/>
+     
+
+      
+      <Container  style = {{marginTop: '71px'}}>
+      <Home/>
+        {/* <Header as='h2' icon={'plug'} content="Wester institute of technology" />
+        <List>
+            {
+          
+              users.map((item)=>(
+                <List.Item key={item.eamil}>{item.firstName}</List.Item>
+              ))
+            }
+        </List> */}
+      </Container> 
+    </>
   );
 }
 
