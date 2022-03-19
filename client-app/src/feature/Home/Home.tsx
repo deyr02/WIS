@@ -7,7 +7,7 @@ export default function Home(){
             <Image  src = {"/assets/columbia-l.jpg"} alt = "background Image" centered fluid/>
             <div className="welcome-text">
            
-                <h1> welcome</h1>
+                <h1> Welcome</h1>
                 <h1> Western Institute of Studies</h1>
             </div>
             <p className="details">

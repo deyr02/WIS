@@ -5,6 +5,7 @@ import { Container, Header, List } from 'semantic-ui-react';
 import { AppUser } from '../models/AppUser';
 import NavBar from './NavBar';
 import Home from '../../feature/Home/Home';
+import RegisterUser from '../../feature/user/Registration';
 
 
 
@@ -27,7 +28,8 @@ function App() {
 
       
       <Container  style = {{marginTop: '71px'}}>
-      <Home/>
+      {/* <Home/> */}
+      <RegisterUser/>
         {/* <Header as='h2' icon={'plug'} content="Wester institute of technology" />
         <List>
             {
