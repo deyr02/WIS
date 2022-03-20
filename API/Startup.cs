@@ -44,7 +44,14 @@ namespace API
             });
 
             
-            services.AddIdentity<AppUser, Role>()
+            services.AddIdentity<AppUser, Role>( opt => {
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequiredLength=1;
+                opt.Password.RequireLowercase=false;
+                opt.Password.RequireUppercase=false;
+                
+                
+            })
             .AddEntityFrameworkStores<DataContext>()
             .AddSignInManager<SignInManager<AppUser>>();
 

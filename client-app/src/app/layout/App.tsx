@@ -6,6 +6,7 @@ import { AppUser } from '../models/AppUser';
 import NavBar from './NavBar';
 import Home from '../../feature/Home/Home';
 import RegisterUser from '../../feature/user/Registration';
+import Login from '../../feature/user/Login';
 
 
 
@@ -29,7 +30,8 @@ function App() {
       
       <Container  style = {{marginTop: '71px'}}>
       {/* <Home/> */}
-      <RegisterUser/>
+      {/* <RegisterUser/> */}
+       <Login/>
         {/* <Header as='h2' icon={'plug'} content="Wester institute of technology" />
         <List>
             {
