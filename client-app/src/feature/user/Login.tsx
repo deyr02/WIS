@@ -61,7 +61,7 @@ export default function Login(){
         setUserDetails({...UserDetails, [name]:value});
     }
     return(
-        <Container style={{padding: '30px 20vw'}}>
+        <Container style={{padding: '30px 50px'}}>
             {
                 sucessfulLoigin?
 
