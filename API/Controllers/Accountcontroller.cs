@@ -80,6 +80,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
+            [AllowAnonymous]
         public  IActionResult Get (){
            
            var users =  _userManager.Users;

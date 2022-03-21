@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\my projects\\wis\\api\\API.csproj": {}
+    "C:\\my projects\\wis\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\my projects\\wis\\api\\API.csproj": {
+    "C:\\my projects\\wis\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\my projects\\wis\\api\\API.csproj",
+        "projectUniqueName": "C:\\my projects\\wis\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\my projects\\wis\\api\\API.csproj",
+        "projectPath": "C:\\my projects\\wis\\API\\API.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\my projects\\wis\\api\\obj\\",
+        "outputPath": "C:\\my projects\\wis\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
