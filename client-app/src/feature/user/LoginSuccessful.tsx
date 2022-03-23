@@ -35,7 +35,7 @@ export default function LoginSuccessful({user}:Props){
                      
                 <Table.Row>
                     <Table.Cell style={{width: '150px'}} >Date of Birth</Table.Cell>
-                    <Table.Cell textAlign='right'>{user.dob==""? "": new Date(user.dob).toDateString()}</Table.Cell>
+                    <Table.Cell textAlign='right'>{user.dob ===""? "": new Date(user.dob).toDateString()}</Table.Cell>
                 </Table.Row>
 
                 <Table.Row>

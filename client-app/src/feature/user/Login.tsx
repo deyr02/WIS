@@ -33,7 +33,7 @@ export default function Login(){
             console.log(response);
             setSubmitting(false);
 
-            if(response.status == 200){
+            if(response.status === 200){
                 setAppUser(response.data)
                 setSuccessfulLogin(true);
             }

@@ -1,14 +1,9 @@
-import axios, { AxiosError, AxiosResponse } from "axios";
-import { response } from "express";
+import axios, {  } from "axios";
 import { AppUser } from "../models/AppUser";
 import { LoginDTO } from "../models/LoginDTO";
 import { RegisterUserDTO } from "../models/RegisterUserDTO";
 
-const sleep = (delay:number) =>{
-    return new Promise ((resolve)=>{
-        setTimeout(resolve, delay);
-    })
-}
+
 
 axios.defaults.baseURL=  process.env.REACT_APP_API_URL;
 

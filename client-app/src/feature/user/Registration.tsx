@@ -1,8 +1,5 @@
-import axios, { Axios } from "axios";
-import { response } from "express";
-import { any } from "prop-types";
-import React, { ChangeEvent, useState } from "react";
-import { Button, Container, Form, Header, Input, Message } from "semantic-ui-react";
+import { ChangeEvent, useState } from "react";
+import { Button, Container, Form, Header, Input } from "semantic-ui-react";
 import agent from "../../app/api/agent";
 import { RegisterUserDTO } from "../../app/models/RegisterUserDTO";
 import RegistrationSuccessfull from "./RegistrationSuccessfull";
@@ -54,7 +51,7 @@ export default function RegisterUser(){
        setErrorFields({...errorFields,   emailError:null });
         
         //checik password and confirm password are same.
-        if(password != UserDetails.password){
+        if(password !== UserDetails.password){
             setErrorFields({...errorFields,   confirmPasswordEror:{content:"Passwords did not match." } })
             return;
 
@@ -67,7 +64,7 @@ export default function RegisterUser(){
                 //   console.log(response.statusText);
                 //   console.log(response.headers);
 
-                  if(response.status == 200){
+                  if(response.status === 200){
                       setIsRegistrationSuccessful(true);
                   }
                 

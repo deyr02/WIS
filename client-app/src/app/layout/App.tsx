@@ -1,8 +1,5 @@
-import React, { Fragment, useEffect, useState } from 'react';
 import './style.css';
-import axios from 'axios';
-import { Container, Header, List } from 'semantic-ui-react';
-import { AppUser } from '../models/AppUser';
+import { Container } from 'semantic-ui-react';
 import NavBar from './NavBar';
 import Home from '../../feature/Home/Home';
 import RegisterUser from '../../feature/user/Registration';
@@ -13,14 +10,7 @@ import { Route } from 'react-router';
 
 
 function App() {
-  const[users, setUsers] = useState<AppUser[]>( []);
-
-  useEffect(()=>{
-    axios.get<AppUser[]>('https://localhost:5001/api/account').then(response => {
-  
-    setUsers(response.data);
-    })
-  },[])
+ 
 
 
   return (
