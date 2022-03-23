@@ -13,7 +13,7 @@ COPY package-lock.json ./
 RUN npm install --silent
 RUN npm install react-scripts@5.0.0 -g --silent
 RUN echo "---tesing application---"
-RUN npm run test
+RUN npm test
 RUN echo "---building -application---""
 
 RUN npm run build
