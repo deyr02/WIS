@@ -80,7 +80,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-            [AllowAnonymous]
+        [AllowAnonymous]
         public  IActionResult Get (){
            
            var users =  _userManager.Users;
@@ -101,6 +101,8 @@ namespace API.Controllers
                 DOB = user.DOB
             };
         }
+
+
         
     }
 
