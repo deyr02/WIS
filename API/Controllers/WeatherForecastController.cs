@@ -27,6 +27,25 @@ namespace API.Controllers
 
       
 
+        [HttpGet("{number}")]
+        [AllowAnonymous]
+        public IEnumerable<WeatherForecast> Get(int number)
+        {
+            if(number >0 && number <=100){
+            var rng = new Random();
+            return Enumerable.Range(1, number).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
+            }
+            return null;
+          
+        }
+
+       
         [HttpGet]
         [AllowAnonymous]
         public IEnumerable<WeatherForecast> Get()
@@ -40,8 +59,6 @@ namespace API.Controllers
             })
             .ToArray();
         }
-
-       
 
       
     }
