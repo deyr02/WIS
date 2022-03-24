@@ -19,4 +19,4 @@ RUN npm install react-scripts@5.0.0 -g --silent
 COPY . ./
 
 # start app
-#CMD ["npm", "start"]
+CMD ["npm", "start"]
