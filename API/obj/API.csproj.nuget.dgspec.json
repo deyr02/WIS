@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\my projects\\wis\\APi\\API.csproj": {}
+    "C:\\my projects\\wis\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\my projects\\wis\\APi\\API.csproj": {
+    "C:\\my projects\\wis\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\my projects\\wis\\APi\\API.csproj",
+        "projectUniqueName": "C:\\my projects\\wis\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\my projects\\wis\\APi\\API.csproj",
+        "projectPath": "C:\\my projects\\wis\\API\\API.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\my projects\\wis\\APi\\obj\\",
+        "outputPath": "C:\\my projects\\wis\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -99,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
