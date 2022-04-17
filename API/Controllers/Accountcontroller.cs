@@ -79,6 +79,19 @@ namespace API.Controllers
 
         }
 
+        [HttpGet]
+            [AllowAnonymous]
+        public  IActionResult Get (){
+           
+           var users =  _userManager.Users;
+            List<AppUserDTO> appUserDTo = new List<AppUserDTO>();
+
+            foreach (var User in users){
+                appUserDTo.Add(CreateUserObject(User));
+            }
+            return Ok(appUserDTo);
+        }
+
 
         private AppUserDTO CreateUserObject(AppUser user){
             return new AppUserDTO{

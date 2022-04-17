@@ -44,7 +44,14 @@ namespace API
             });
 
             
-            services.AddIdentity<AppUser, Role>()
+            services.AddIdentity<AppUser, Role>( opt => {
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequiredLength=1;
+                opt.Password.RequireLowercase=false;
+                opt.Password.RequireUppercase=false;
+                
+                
+            })
             .AddEntityFrameworkStores<DataContext>()
             .AddSignInManager<SignInManager<AppUser>>();
 
@@ -72,7 +79,12 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-              app.UseCors("CorsPolicy");
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
+
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -80,6 +92,7 @@ namespace API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapFallbackToController("Index", "Fallback");
             });
         }
     }

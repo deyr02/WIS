@@ -3,5 +3,5 @@
 
 ### Technology Stack used 
 #### .Net Core api
-#### SQL server
+#### SQlite
 #### React Typescript
